@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ibm-deploy
+  name: nginx-deployment
 spec:
   template:
     metadata:
       labels:
-        app: ibm1
+        app: nginx
     spec:
       containers:
       - name: app
@@ -16,4 +16,4 @@ spec:
 replcias: 3
 selector:
   matchLabels:
-    app: ibm1
+    app: nginx

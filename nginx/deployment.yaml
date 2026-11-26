@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: ibm-deploy
+spec:
+  template:
+    metadata:
+      labels:
+        app: ibm1
+    spec:
+      containers:
+      - name: app
+        image: nginx
+        ports:
+        - containerPort: 80
+replcias: 3
+selector:
+  matchLabels:
+    app: ibm1

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: ibm-deploy
 spec:
   template:
     metadata:
       labels:
-        app: nginx
+        app: ibm1
     spec:
       containers:
       - name: app
         image: nginx
         ports:
         - containerPort: 80
-replcias: 3
-selector:
-  matchLabels:
-    app: nginx
+          replicas: 3
+          selector:
+            matchLabels:
+              app: ibm1
